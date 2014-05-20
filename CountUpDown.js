@@ -49,7 +49,7 @@ function countBack(div, secs, isCountingDown) {
 
     setTimeout(function(){
       countBack(div, (isCountingDown ? (secs-1) : (secs+1)), isCountingDown);
-    }, 995); /*chose 995 as opposed to 1000 to take into account slight processing delay, could optimize*/
+    }, 990); /*chose 990 as opposed to 1000 to take into account slight processing delay, could optimize*/
 
   } else {
     document.getElementById(div).innerHTML = "00:00:00:00";
