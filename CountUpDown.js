@@ -16,8 +16,8 @@
  */
 
  function startCount(div, targetDate, isCountingDown) {
-  var oldDate = new Date(targetDate);
-  var currentDate = new Date();
+  const oldDate = new Date(targetDate);
+ const currentDate = new Date();
 
   differenceInDate = new Date(isCountingDown ? (oldDate - currentDate) : (currentDate - oldDate));
 
@@ -36,8 +36,8 @@ function calcAge(secs, num1, num2) {
 }
 
 function countBack(div, secs, isCountingDown) {
-  var displayStr;
-  var displayFormat = "%%D%%:%%H%%:%%M%%:%%S%%";
+  const displayStr;
+  const displayFormat = "%%D%%:%%H%%:%%M%%:%%S%%";
 
   displayStr = displayFormat.replace(/%%D%%/, calcAge(secs, 86400, 100000));
   displayStr = displayStr.replace(/%%H%%/, calcAge(secs, 3600, 24));
